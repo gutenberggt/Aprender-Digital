@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+                    </title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://demo.franquiadigital.net/css/custom2.css">
+
+        <script src="https://demo.franquiadigital.net/js/custom2.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+        <style>
+            .not-allowed {
+                cursor: not-allowed;
+            }
+
+            .toast-top-center {
+                top: 60px;
+            }
+
+            .efeito-border {
+                background:rgba(255, 255, 255, 0.25);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(7px);
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                text-align: justify;
+                text-indent: 50px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                overflow-y: auto;
+            }
+
+            .disabledAula {
+                opacity: 0.8;
+                cursor: not-allowed;
+            }
+        </style>
+
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    </head>
+
+    <script>
+        function iniciar() {
+            var x = document.getElementById("first-text");
+            var primeiro_exercicio = document.getElementById("exercicio_1");
+            x.style.display = "none";
+            primeiro_exercicio.style.display = "block";
+        }
+
+        function next_exercicio(val) {
+            var b = val;
+            var atual = b;
+            var novo = b + 1;
+            var x = document.getElementById('exercicio_' + atual);
+            var y = document.getElementById('exercicio_' + novo);
+            x.style.display = "none";
+            y.style.display = "block";
+        }
+    </script>
+
+    <style>
+         /* quadro de aulas */
+
+         .modern-list-group {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.modern-list-item {
+    border: none;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.modern-list-item:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modern-list-item i {
+    margin-right: 10px;
+    color: #d70909d1;
+    font-size: 1.2rem;
+}
+
+.modern-list-item.active {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.modern-list-item.active i {
+    color: #ffffff;
+}
+/*  */
+        .vertical-center {
+            min-height: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+        }
+
+        .rating > span {
+            display: inline-block;
+            position: relative;
+        }
+
+        .rating > span:hover,
+        .rating > span:hover ~ span {
+            color: transparent;
+        }
+
+        .rating > span:hover:before,
+        .rating > span:hover ~ span:before {
+            content: "\2605";
+            position: absolute;
+            left: 0;
+            color: gold;
+            cursor: pointer;
+        }
+
+        .span_star {
+            font-size:50px;
+            color:#f5f5f5;
+            text-shadow: 0px 5px 5px #000;
+        }
+
+        .wrapper {
+            height:175px;
+            width: 100%;
+            opacity: 0.7;
+            left: 0px;
+            right: 0px;
+        }
+
+        .doc-wrapper {
+            overflow: hidden;
+            margin-left: -50px;
+			width: 100%;
+            height: 100%;
+            margin-right: 30px;
+            position: relative;
+        }
+
+        .doc-wrapper iframe{
+			position: relative;
+            top: 0;
+            left: 500;
+            width: 100%;
+            height: 1000px;
+        }
+
+        .selected { color:gold; }
+
+        .embed-responsive.embed-responsive-16by9 {
+            height: 1055px!important;
+            margin-bottom:100px!important;
+        }
+
+        .embed-responsive.embed-responsive-16by9x {
+            height: 500px!important;
+            margin-bottom: 100px!important;
+            margin-top: 10px;
+        }
+
+        .shortcut-bar {
+            background-color: #1F3345;
+            width: 100%;
+            text-align: left;
+        }
+
+        .shortcut-bar h2 {
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .shortcut-bar a {
+            float: right;
+        }
+
+        .resposta, .acertos {
+            border-radius: 25px;
+        }
+    </style>
+    
+    <style>
+        /* Estilos da Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 100vh;
+            background-color:#212428;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+        }
+
+        .sidebar.show {
+            transform: translateX(0);
+        }
+
+        .sidebar h4 {
+            color: #f8f9fa;
+            font-size: 1.5rem;
+        }
+
+        .sidebar .chat-quadro {
+            height: 400px;
+            overflow-y: auto;
+            /* border: 1px solid #ddd; */
+            margin-bottom: 20px;
+            padding: 10px;
+            /* background-color: #fff; */
+            background-color: rgb(19, 20, 21);
+            border-radius: 5px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        .message span {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .form-container {
+            display: flex;
+            /* justify-content: space-between; */
+            width: 100%;
+        }
+
+        .form-container textarea {
+            width: 100%;
+            background-color:rgb(19, 20, 21);
+            border: 0;
+        }
+
+        .form-container textarea:focus {
+            width: 100%;
+            background-color:rgb(26, 28, 30);
+            border: 0;
+        }
+
+        /* .form-container button {
+            width: 18%;
+            border-radius: 20px;
+        } */
+
+        /* Estilos do conteúdo */
+        .content {
+            margin-left: 320px;
+            padding: 30px;
+        }
+
+        /* Botão para abrir/fechar a sidebar */
+        /* .toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background-color: #343a40;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 1.5rem;
+        } */
+
+        .toggle-btn:hover {
+            background-color: #495057;
+            cursor: pointer;
+        }
+
+        /* Botão de Fechar na Sidebar */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: none !important;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+        }
+
+        .close-btn:hover {
+            border: none !important;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 85%;
+            }
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+
+    
+    <body>
+        <div class="container-fluid m-0 p-0">
+            <div class="shortcut-bar p-3" style="background-color: #f5f5f5; border-radius: 8px;">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-sm-12 mb-2">
+                    <h2 style="color: #333; font-weight: 700;">
+                        Curso de Windows 10                    </h2>
+                    <small style="color: #777;"><i>()</i></small>
+                    </div>
+                                        <div class="col-lg-8 col-sm-12 text-lg-right text-center">
+                        <a href="https://demo.franquiadigital.net/site/area_usuario" class="btn btn-outline-dark mx-1 mb-2 custom-hover-dark">
+                            <i class="fas fa-arrow-left"></i> Voltar
+                        </a>
+                        <a class="btn btn-outline-info mx-1 mb-2 custom-hover-info" target="_blank" href="https://demo.franquiadigital.net/site/usuarios_comprovante_matricula_pdf/">
+                            <i class="fas fa-file-pdf"></i> Comprovante de Matrícula
+                        </a>
+                                                                                            </div>
+                                    </div>
+            </div>
+            
+                        
+            <div class="row">
+                <div class=" col-lg-12  col-sm-12 col-xs-12">
+                    <div class="visualizador" >
+                        
+				        
+				        
+                        
+                                                    <div class="title-cursos">
+                            <h3 class="pt-3"></h3>
+                            </div>
+                                                            <!-- Exibe o iframe do curso SIE -->
+                                <div class="embed-responsive-16by9">
+                                    <iframe src="https://www.sie.com.br/ava/sala?aluno=746145&amp;curso=83823&amp;layout=2&amp;atividades=0&amp;token=97cd2cfe948b7bbcc13c4ea493e4bb88&amp;p=100&amp;empresa=27474" width="100%" height="600px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                                        
+                                
+                            <center>
+                                
+                                                            </center>
+
+                                                                        </div>
+
+                                    </div>
+
+                            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Avaliação do Curso</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+
+                    <div id="modal-body">Pressione ESC para sair.</div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalTutor" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Fale Com o Tutor</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+
+                    <div id="modal-body" style="padding: 10px;">
+                        <div class="col-12">
+                            <div class="media border p-3">
+                                <i class="fas fa-3x fa-chalkboard-teacher" style="margin-right: 10px;"></i>
+                                <div class="media-body">
+                                                                                                                                                                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-center",
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        
+        window.onload = initPage;
+
+        var elementoOriginal = document.querySelector("proximoElemento");
+        var elementoClone = elementoOriginal.cloneNode(true);
+
+        document.body.appendChild(elementoClone);
+    </script>
+
+     <!-- CSS para efeito de hover -->
+<style>
+    /* botão proximo */
+    .btn-modern {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-modern i {
+    margin-left: 8px;
+    font-size: 1.1rem;
+}
+
+.btn-modern:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/* fim botão */
+    .custom-hover-dark:hover {
+        background-color: #444;
+        color: #fff;
+        border-color: #444;
+    }
+    .custom-hover-info:hover {
+        background-color: #138496;
+        color: #fff;
+        border-color: #138496;
+    }
+    .custom-hover-success:hover {
+        background-color: #218838;
+        color: #fff;
+        border-color: #218838;
+    }
+    .custom-hover-primary:hover {
+        background-color: #0062cc;
+        color: #fff;
+        border-color: #0062cc;
+    }
+    .custom-hover-warning:hover {
+        background-color: #e0a800;
+        color: #212529;
+        border-color: #e0a800;
+    }
+</style>
+</html>

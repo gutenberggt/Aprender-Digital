@@ -1,0 +1,482 @@
+<html lang="pt-BR">
+<head><meta charset="utf-8">
+  
+  <link rel="icon" href="https://aprenderdigital.top/imagens/favicom.png" type="image/x-icon">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Quem somos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .carousel {
+      display: flex;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    .carousel-item {
+      flex: none;
+      scroll-snap-align: start;
+      width: 100%;
+    }
+  </style>
+  <meta property="og:title" content="Aprender Digital" />
+  <meta property="og:description" content="Educação de qualidade, onde você estiver. Explore nossos cursos e comece a aprender hoje mesmo!" />
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/-kgTZ2T_oysd4tgtI4jbI4B3mVldXiDKbpzUR0igIjc.jpg" />
+  <meta property="og:url" content="https://aprenderdigital.top" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aprender Digital" />
+  <meta name="twitter:description" content="Educação de qualidade, onde você estiver. Explore nossos cursos e comece a aprender hoje mesmo!" />
+  <meta name="twitter:image" content="https://storage.googleapis.com/a1aa/image/-kgTZ2T_oysd4tgtI4jbI4B3mVldXiDKbpzUR0igIjc.jpg" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousels = document.querySelectorAll('.carousel');
+      carousels.forEach(carousel => {
+        let interval = setInterval(() => {
+          const firstItem = carousel.querySelector('.carousel-item:first-child');
+          carousel.appendChild(firstItem);
+        }, 5000);
+      });
+
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+
+      dropdown.addEventListener('click', function (event) {
+        event.stopPropagation();
+        dropdownMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', function () {
+        dropdownMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</head>
+<body class="font-roboto bg-gray-100">
+  <div class="max-w-7xl mx-auto bg-white shadow-lg">
+    <header id="header" class="bg-blue-600 text-white fixed top-0 w-full z-10 transition-all duration-300">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold">
+          <a href="https://aprenderdigital.top" class="no-link-style">
+            <img src="https://aprenderdigital.top/imagens/logotipo/logotipo_branco_la.png" alt="Logotipo da Aprender Digital" class="h-12 w-auto"/>
+          </a>
+        </div>
+        <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+        <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+          <a class="hover:hover:text-blue-900 no-underline" href="https://aprenderdigital.top">Home</a>
+          <div class="relative dropdown">
+            <a class="block px-4 py-2 hover:hover:text-blue-900 no-underline" href="#">Nossos Cursos</a>
+            <ul class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded hidden dropdown-menu">
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#livres.html">Profiss. Comuns</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#livres.html">Profiss. Avançados</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/eja_medio.html">EJA - Fundamental e Médio</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#livres.html">Técnicos</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Pós-Técnicos</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Cert. por Competência</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Tecnólogos</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#graduacao.html">Graduação</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#livres.html">2ª Graduação</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Superior Sequencial</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Extensão Universitária</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#pos.html">Pós-Graduação</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#gratis.html">Cursos Grátis</a></li>
+            </ul>
+          </div>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/quem_somos.html">Quem Somos</a>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/blog/blog.html">Blog</a>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/verificar_certificado.html">Verificar Certificado</a>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/politica_de_privacidade.html">Política de Privacidade</a>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/fale_conosco.html">Fale Conosco</a>
+          <a href="https://aprenderdigital.top/cursos/login/index.php" class="bg-blue-200 text-black px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Minha Conta</a>
+        </nav>
+      </div>
+    </header>
+    <script>
+      window.onscroll = function() {changeHeaderColor()};
+      function changeHeaderColor() {
+        const header = document.getElementById("header");
+        if (window.pageYOffset > 50) {
+          header.classList.add("bg-blue-200");
+          header.classList.remove("bg-blue-600");
+        } else {
+          header.classList.add("bg-blue-600");
+          header.classList.remove("bg-blue-200");
+        }
+      }
+    </script>
+
+  </div>
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Menu toggle para dispositivos móveis
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      // Dropdown funcionalidade
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+
+      dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('hidden');
+      });
+
+      // Fechar dropdown ao clicar fora
+      document.addEventListener('click', () => {
+        dropdownMenu.classList.add('hidden');
+      });
+    });
+  </script>
+
+<main>
+      <section class="py-12">
+        <div class="container mx-auto">
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+          <h1 class="text-4xl font-bold mb-4">Quem Somos</h1>
+          <p class="text-lg mb-6">
+
+         <section style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: auto;">
+    
+	<p style="font-size: 20px; font-weight: bold; color: #1a73e8; text-align: center;>Invista no seu futuro com a Aprender Digital – <em>Educação de qualidade, onde você estiver!</em></h1>
+
+	<p style="font-size: 18px; text-align: center; font-weight: bold;">Invista em seu futuro com a Aprender Digital.</h1>
+	<br>
+	<p style="font-size: 18px; text-align: center; font-weight: bold;">Educação de qualidade, onde você estiver!</h1>
+	<p>&nbsp;</p>
+    <p style="font-size: 18px; text-align: center; font-weight: bold;">Imagine transformar sua vida, conquistar novas oportunidades e alcançar seus sonhos por meio da educação.</p>
+    <br>
+    <p>Na <strong>Aprender Digital</strong>, tornamos isso possível! Somos a plataforma que conecta você a <strong>cursos de alta qualidade</strong>, desenvolvidos para atender às suas necessidades de forma <strong>flexível</strong> e <strong>acessível</strong>.</p>
+     <br>
+    <p style="font-size: 20px; font-weight: bold; color: #1a73e8; text-align: center;">Nosso compromisso vai além do ensino: queremos ver você crescer, evoluir e conquistar o que realmente deseja.</p>
+     <br>
+    <p>Oferecemos uma <strong>ampla variedade de cursos Livres, Palestras e Treinamentos</strong>.</p>
+    <ul style="list-style: none; padding-left: 0;">
+        
+		<br>
+		<p>Além disso, atuamos em parceria com a <a href="https://www.laeducacao.com.br/" target="_blank"><strong>LA Educação</strong></a>, representando instituições de ensino devidamente autorizadas pelo MEC. Isso significa que, ao estudar conosco, você tem a <strong>certeza de uma formação reconhecida e certificada</strong>.</p>
+		<p>Representamos e intermediamos para você de maneira mais acessível:</p>
+        <br>
+		<li style="background: #f4f4f4; padding: 10px; margin-bottom: 5px; border-left: 5px solid #1a73e8;">✔ Cursos EJA – Ensino Fundamental</li>
+		<li style="background: #f4f4f4; padding: 10px; margin-bottom: 5px; border-left: 5px solid #1a73e8;">✔ Cursos EJA – Ensino Médio</li>
+		<li style="background: #f4f4f4; padding: 10px; margin-bottom: 5px; border-left: 5px solid #1a73e8;">✔ Cursos EJA – Ensino Fundamental e Médio</li>
+		<li style="background: #f4f4f4; padding: 10px; margin-bottom: 5px; border-left: 5px solid #1a73e8;">✔ Cursos Técnicos</li>
+		<li style="background: #f4f4f4; padding: 10px; margin-bottom: 5px; border-left: 5px solid #1a73e8;">✔ Graduação</li>
+		<li style="background: #f4f4f4; padding: 10px; margin-bottom: 5px; border-left: 5px solid #1a73e8;">✔ Pós-Graduação</li>		     
+    </ul>
+	<br>
+    <p style="font-size: 20px; font-weight: bold; color: #1a73e8; text-align: center;">Por que escolher a Aprender Digital?</h2>
+	    <ul style="list-style-type: disc; margin-left: 20px;">
+		<br>
+        <li><strong>Flexibilidade:</strong> estude no seu ritmo, de onde quiser.</li>
+        <li><strong>Credibilidade:</strong> cursos certificados por instituições reconhecidas.</li>
+        <li><strong>Apoio especializado:</strong> professores altamente qualificados à sua disposição.</li>
+        <li><strong>Materiais atualizados:</strong> conteúdos alinhados às exigências do mercado.</li>
+    </ul>
+	<br>
+    <p style="font-size: 18px; text-align: center;"><strong>Não adie mais o seu sucesso!</strong> O momento de transformar sua vida é <span style="color: #d32f2f;">agora</span>.</p>
+	<br>
+    <p style="text-align: center; font-size: 20px; font-weight: bold; color: #1a73e8;">🚀 Escolha seu curso, inscreva-se hoje mesmo e dê o primeiro passo rumo ao seu futuro de sucesso!</p>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://aprenderdigital.top/" target="_blank" 
+            style="background: #1a73e8; color: #fff; padding: 15px 30px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px;">
+            Escolha seu curso Agora!
+        </a>
+    </div>
+      </section>
+    </main>
+     </div>
+    </section>
+    <section class="bg-gray-200 py-12">
+     <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">
+       Nossos Cursos Populares
+      </h2>
+      <div class="carousel">
+       <div class="carousel-item">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de programação" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/PAscqhHJGQQuvNtmcbUkvkslKW_9FMiTQTigdzfe5s8.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Programação
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Aprenda a programar com os melhores instrutores.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de design gráfico" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/zmn_DxDmhhvdSnvfMiH5Gh9l0zU6x8NbHWfJUML-5q8.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Design Gráfico
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Domine as ferramentas de design gráfico.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de marketing digital" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/uk2ijWYzDyUDVgg6MEYDebrwE_ARuK6Mvor3Vxekcmg.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Marketing Digital
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Aprenda as melhores estratégias de marketing digital.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de fotografia" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/9OR_m1RyakqMafowZK_GMULep_Aa31zOKRpxUiV1wHI.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Fotografia
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Aprenda técnicas de fotografia com profissionais.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de culinária" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/u6X4FVQnfZ-b0eXUBcP2eC3sXfJevB_kQf9lLoYdmrM.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Culinária
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Torne-se um chef com nossos cursos de culinária.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de música" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/F2mCuTTEcD_q1FQfMmpqeX5xZ6TpPAUrkICw4DerinU.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Música
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Aprenda a tocar instrumentos musicais.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de idiomas" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/HR7ndZGjFk80urLmowNJLfijsNO2o7kyWJz7BtueI7o.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Idiomas
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Aprenda novos idiomas com facilidade.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de desenvolvimento pessoal" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/gub2IBXb3DYAY0ajvZ-qd0mZu1y0fYZzJz2ZjCIMofg.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Desenvolvimento Pessoal
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Melhore suas habilidades pessoais e profissionais.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de finanças pessoais" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/_HbZiCutf-gs8J6Ty2GXSYfbm-FjhH2jWts_acqzA20.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Finanças Pessoais
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Aprenda a gerenciar suas finanças de forma eficaz.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de yoga" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/8iovmPHaM4wLNKh2uc2bV0uKV6n5dRjMWvP1yFhytqs.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Yoga
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Aprenda técnicas de yoga para melhorar sua saúde.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de artesanato" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/1EtzWPS5XvuGeLR2S_TJKkLUQUmoNlrOaI8U4CFnqI4.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Artesanato
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Desenvolva suas habilidades em artesanato.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+         <div class="bg-white p-6 rounded shadow-lg">
+          <img alt="Imagem representando um curso de jardinagem" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/Sj2g4UbqzTcUjaCODpr03RJ-nZE6iiqlHxgTMx8epog.jpg" width="300"/>
+          <h3 class="text-xl font-bold mb-2">
+           Curso de Jardinagem
+          </h3>
+          <p class="text-gray-700 mb-4">
+           Aprenda a cuidar do seu jardim de forma eficiente.
+          </p>
+          <a class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" href="#">
+           Saiba Mais
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="py-12">
+     <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">
+       Depoimentos
+      </h2>
+      <div class="carousel">
+       <div class="carousel-item">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+         <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <img alt="Foto de um estudante satisfeito" class="mb-4 rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/kTCap6G7G0EE0w_P86kezd7RNm7jqYRGA2NVyUmE0js.jpg" width="100"/>
+          <p class="text-gray-700 mb-4">
+           "O Aprender Digital mudou minha vida! Os cursos são incríveis e os instrutores são muito qualificados."
+          </p>
+          <p class="font-bold">
+           João Silva
+          </p>
+         </div>
+         <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <img alt="Foto de uma estudante satisfeita" class="mb-4 rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/zzhZCxAVvxSsAY5p4vqIDPxPdHEbH4Cc-9j04gJ79-s.jpg" width="100"/>
+          <p class="text-gray-700 mb-4">
+           "Aprendi muito com os cursos de design gráfico. Agora me sinto confiante para trabalhar na área."
+          </p>
+          <p class="font-bold">
+           Maria Oliveira
+          </p>
+         </div>
+         <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <img alt="Foto de um estudante satisfeito" class="mb-4 rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/kTCap6G7G0EE0w_P86kezd7RNm7jqYRGA2NVyUmE0js.jpg" width="100"/>
+          <p class="text-gray-700 mb-4">
+           "Os cursos de marketing digital são muito completos e atualizados. Recomendo a todos!"
+          </p>
+          <p class="font-bold">
+           Carlos Souza
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="carousel-item">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+         <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <img alt="Foto de um estudante satisfeito" class="mb-4 rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/kTCap6G7G0EE0w_P86kezd7RNm7jqYRGA2NVyUmE0js.jpg" width="100"/>
+          <p class="text-gray-700 mb-4">
+           "Os cursos de fotografia são muito completos e me ajudaram a melhorar minhas habilidades."
+          </p>
+          <p class="font-bold">
+           Ana Paula
+          </p>
+         </div>
+         <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <img alt="Foto de um estudante satisfeito" class="mb-4 rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/kTCap6G7G0EE0w_P86kezd7RNm7jqYRGA2NVyUmE0js.jpg" width="100"/>
+          <p class="text-gray-700 mb-4">
+           "Os cursos de culinária são incríveis! Aprendi muitas receitas novas."
+          </p>
+          <p class="font-bold">
+           Pedro Henrique
+          </p>
+         </div>
+         <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <img alt="Foto de um estudante satisfeito" class="mb-4 rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/kTCap6G7G0EE0w_P86kezd7RNm7jqYRGA2NVyUmE0js.jpg" width="100"/>
+          <p class="text-gray-700 mb-4">
+           "Os cursos de música são muito completos e me ajudaram a melhorar minhas habilidades."
+          </p>
+          <p class="font-bold">
+           Lucas Ferreira
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-lg font-bold mb-4"><i class="fas fa-shopping-cart"></i> Categorias</h4>
+            <ul>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">ADMINISTRATIVO</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">INFORMÁTICA E TECNOLOGIA</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">IDIOMAS</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">PREPARATÓRIOS</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">DIVERSAS ÁREAS</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4"><i class="fas fa-user"></i> Minha conta</h4>
+            <ul>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">Meus cursos</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">Minha conta</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">Suporte</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">Contato</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4"><i class="fas fa-phone-square"></i> Contato</h4>
+            <p class="mb-2"><i class="fas fa-phone"></i> <a href="tel:+5594984223453" class="phone-link">(94) 98422-3453</a></p>
+            <p class="mb-2"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5594984223453?text=Olá%20Gutenberg%20Barroso,%20gostaria%20de%20saber%20mais%20sobre%20um%20curso!" target="_blank" class="whatsapp-link">(94) 98422-3453</a></p>
+            <p class="mb-2"><i class="fas fa-map-marker-alt"></i> Av. 7 de Setembro, Nº 2720, Setor: Centro, Floresta do Araguaia / PA, CEP: 68543-000</p>
+            <p class="mb-2"><i class="far fa-envelope"></i> contato@aprenderdigital.top</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4"><i class="fas fa-lock"></i> Compra Segura</h4>
+            <center>
+              <img alt="Imagem representando segurança na compra" class="mb-4" height="239" src="https://aprenderdigital.top/imagens/Compra_100_segura.png" width="239"/>
+            </center>
+          </div>
+        </div>
+        <p class="text-center mt-8">CNPJ 58.964.397/0001-11 © 2025 Todos os direitos reservados a <a class="text-blue-500 hover:underline" href="https://www.facebook.com/prof.gutenbergbarroso" target="_blank">Gutenberg Barroso</a>.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

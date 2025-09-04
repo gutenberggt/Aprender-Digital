@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+			<!-- Desenvolvido por Gutenberg Barroso em 14 de maio de 2025 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO APRENDER DIGITAL</title>
+	<!-- favicon (ícone do site que aparece na aba do navegador) -->
+	<link rel="icon" type="image/png" href="https://aprenderdigital.top/imagens/favicom.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .top-bar {
+            background-color: #f8f9fa;
+        }
+        .social-icons a {
+            color: #333;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .search-area input {
+            width: 200px;
+        }
+        .second-bar {
+            background-color: #ffffff;
+        }
+        .course-btn {
+            background-color: #add8e6;
+            color: #000;
+            padding: 10px;
+            border: none;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+        .course-btn:hover {
+            background-color: #00008b;
+            color: #fff;
+            text-decoration: none;
+        }
+        .course-btn + .course-btn {
+            margin-top: 10px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-img {
+            width: 100%;
+            height: auto;
+        }
+        .bg-custom-gray {
+            background-color: #e9ecef;
+        }
+		.top-bar {
+		  background-color: #f57c00; /* Laranja forte */
+		  color: white;
+		  padding: 5px 20px;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  font-size: 14px;
+		}
+		.nav-bar {
+		  background-color: #1565c0; /* Azul médio */
+		  color: white;
+		  padding: 10px 20px;
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		}
+		.carousel-inner img {
+			border-radius: 10px;
+		}
+	/* Fixar a segunda barra */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* garantir que fique acima de outros elementos */
+}
+
+/* Fixar o banner cinza abaixo da segunda barra */
+.banner-sticky {
+    position: sticky;
+    top: 60px; /* ajuste conforme a altura da barra acima */
+    z-index: 1020;
+}
+    </style>
+	
+	
+  <!-- PIXEL DO FACEBOOK -->
+	  <script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '3963618581879'); 
+		fbq('track', 'PageView');
+	  </script>
+	  <noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=3963618581879&ev=PageView&noscript=1"
+	  /></noscript>
+
+	  <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-899Q9DMSJF"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-899Q9DMSJF');
+	</script>
+
+	
+</head>
+<body>
+    <!-- Primeira barra: redes sociais + pesquisa + botões -->
+<div class="top-bar bg-orange text-white py-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        
+        <!-- Ícones de redes sociais -->
+        <div class="social-icons d-flex gap-2">
+            <a href="https://www.facebook.com/aprenderdigitallll" class="text-white" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aprenderdigital_" class="text-white" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@GutenbergBarroso_" class="text-white" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5594984223453" class="text-white" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <!-- Campo de pesquisa com ícone de lupa -->
+        <div class="search-bar d-flex align-items-center">
+            <input type="text" class="form-control form-control-sm me-1" placeholder="Pesquisar no site...">
+            <button class="btn btn-light btn-sm"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Botões de Área Restrita e E-mail -->
+        <div class="buttons d-flex gap-2">
+            <a href="https://aprenderdigital.top/cursos/login/" class="btn btn-outline-light btn-sm fw-bold border border-white">Área Restrita</a>
+            <a href="https://webmail.aprenderdigital.top/" class="btn btn-outline-light btn-sm fw-bold border border-white">E-mail</a>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Segunda barra: logotipo + navegação -->
+<nav class="nav-bar navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="imagens/logotipo/logo_brancola.png" alt="Logo Aprender Digital" style="height: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/curso">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/nos/">Quem Somos</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/blog/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/certificados">Validar Certificado</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/pp">Política de Privacidade</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Banner Cinza -->
+<div class="bg-custom-gray text-center py-3 banner-sticky">
+    <p class="mb-0"><strong>Projeto Aprender Digital</strong> — Em parceria com a LA Educação, conectamos você ao aprendizado de qualidade, onde quer que esteja!</p>
+</div>
+
+    <!-- Conteúdo principal -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Primeira Coluna (2/3) -->
+            <div class="col-md-8">
+                <!-- Carrousel de Banners -->
+                <div id="carouselBanners" class="carousel slide mb-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://aprenderdigital.top/imagens/banners/1eja.png" class="d-block w-100" alt="Banner 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://aprenderdigital.top/imagens/banners/3tecnologo_unifemm.png" class="d-block w-100" alt="Banner 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://aprenderdigital.top/imagens/banners/4segunda_licenciatura_6a12meses.png" class="d-block w-100" alt="Banner 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanners" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselBanners" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                    <button id="carouselPauseBtn" class="btn btn-secondary btn-sm" style="position: absolute; bottom: 10px; right: 10px;">Pausar</button>
+                </div>
+
+                <!-- Parcerias -->
+                <div class="container my-5">
+    <div class="text-center mb-4">
+        <i class="fas fa-handshake fa-2x text-primary"></i>
+        <h3 class="mt-2">Parcerias de confiança com instituições reconhecidas</h3>
+    </div>
+    <div class="row text-center">
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://www.itecceduc.com/" target="_blank">
+                <img src="imagens/EJA/eec_logo.png" alt="Centro Educacional Carajás" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://www.unifemm.edu.br/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/unifemm.jpg" alt="UNIFEMM" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://unimaisedu.com.br/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/unimais.png" alt="UNIMAIS" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://www.faculdadevincit.edu.br/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/vincit.png" alt="VINCIT" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://atomeducacional.com.br/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/atom.png" alt="ATOM" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://www.facla.edu.br/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/lafaculdade.png" alt="LA Faculdade" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://enberuniversity.com/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/enber.jpg" alt="ENBER" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://fipemig.edu.br/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/ipemig.png" alt="Ipemig" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://univoltaire.edu.br/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/univoltaire.png" alt="UNIVOLTAIRE" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 mb-4 d-flex justify-content-center align-items-center">
+            <a href="https://www.laeducacaose.com.br/" target="_blank">
+                <img src="https://aprenderdigital.top/imagens/parceria/laeducacao.jpg" alt="LA EDUCAÇÃO" class="img-fluid logo-parceiro">
+            </a>
+        </div>
+    </div>
+</div>
+
+               
+				<!-- YouTube vídeo -->
+<div class="mb-4">
+    <div class="ratio ratio-16x9 rounded overflow-hidden" style="border-radius: 15px;">
+        <div id="youtube-video"></div>
+    </div>
+
+    <div class="text-center mt-2">
+        <button id="unmuteBtn" class="btn btn-outline-primary me-2">🔊 Assistir com som</button>
+        <button id="muteBtn" class="btn btn-secondary active">🔇 Assistir sem som</button>
+    </div>
+</div>
+
+<!-- Script da API do YouTube -->
+<script>
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-video', {
+            height: '360',
+            width: '640',
+            videoId: 'MtXXg849-ys',
+            playerVars: {
+                autoplay: 1,
+                mute: 1, // começa sem som
+                loop: 1,
+                playlist: 'MtXXg849-ys',
+                controls: 0,
+                rel: 0,
+                modestbranding: 1
+            },
+            events: {
+                onReady: onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        const unmuteBtn = document.getElementById('unmuteBtn');
+        const muteBtn = document.getElementById('muteBtn');
+
+        // Começa mudo e em loop
+        player.playVideo();
+        player.mute();
+
+        unmuteBtn.addEventListener('click', () => {
+            player.unMute();
+            unmuteBtn.classList.remove('btn-outline-primary');
+            unmuteBtn.classList.add('btn-primary', 'active');
+            muteBtn.classList.remove('btn-secondary', 'active');
+            muteBtn.classList.add('btn-outline-secondary');
+        });
+
+        muteBtn.addEventListener('click', () => {
+            player.mute();
+            muteBtn.classList.remove('btn-outline-secondary');
+            muteBtn.classList.add('btn-secondary', 'active');
+            unmuteBtn.classList.remove('btn-primary', 'active');
+            unmuteBtn.classList.add('btn-outline-primary');
+        });
+    }
+
+    // Carregar a API do YouTube
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+
+				</div>
+
+            <!-- Segunda Coluna - Modalidades de Cursos -->
+			<div class="col-lg-4">
+				<h5 class="text-center text-uppercase fw-bold mb-4">Modalidades de Cursos</h5>
+
+				<div class="d-grid gap-2">
+					<a href="https://aprenderdigital.top/eja/fundamental/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> EJA ENSINO FUNDAMENTAL
+					</a>
+					<a href="https://aprenderdigital.top/eja/medio/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> EJA ENSINO MÉDIO
+					</a>
+					<a href="https://aprenderdigital.top/eja/fundamental_medio/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> EJA ENSINO FUNDAMENTAL E MÉDIO
+					</a>
+					<a href="https://aprenderdigital.top/profissionalizantes_comuns" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> PROFISSIONALIZANTES COMUNS
+					</a>
+					<a href="https://aprenderdigital.top/profissionalizantes_avancados" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> PROFISSIONALIZANTES AVANÇADOS
+					</a>
+					<a href="https://aprenderdigital.top/profissionalizantes_especiais" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> PROFISSIONALIZANTES ESPECIAIS
+					</a>
+					<a href="https://aprenderdigital.top/profissionalizantes_premiuns" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> PROFISSIONALIZANTES PREMIUNS
+					</a>
+					<a href="https://aprenderdigital.top/tecnicos/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> TÉCNICOS
+					</a>
+					<a href="https://aprenderdigital.top/competencia/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> CERTIFICAÇÃO POR COMPETÊNCIA
+					</a>
+					<a href="https://aprenderdigital.top/pos_tecnicos/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> PÓS-TÉCNICOS
+					</a>
+					<a href="https://aprenderdigital.top/tecnologos/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> TECNÓLOGOS
+					</a>
+					<a href="https://aprenderdigital.top/licenciaturas/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> LICENCIATURAS
+					</a>
+					<a href="https://aprenderdigital.top/bacharelados/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> BACHARELADOS
+					</a>
+					<a href="https://aprenderdigital.top/segunda_licenciatura/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> SEGUNDA LICENCIATURA
+					</a>
+					<a href="https://aprenderdigital.top/formacao_pedagogica/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> FORMAÇÃO PEDAGÓGICA
+					</a>
+					<a href="https://aprenderdigital.top/superior_sequencial/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> SUPERIOR SEQUENCIAL
+					</a>
+					<a href="https://aprenderdigital.top/segunda_graduacao/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> SEGUNDA GRADUAÇÃO
+					</a>
+					<a href="https://aprenderdigital.top/pos_graduacao/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> PÓS-GRADUAÇÃO
+					</a>
+					<a href="https://aprenderdigital.top/extencao/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> EXTENSÃO UNIVERSITÁRIA
+					</a>
+					<a href="https://aprenderdigital.top/mestrado/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> MESTRADO
+					</a>
+					<a href="https://aprenderdigital.top/doutorado/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> DOUTORADO
+					</a>
+					<a href="https://aprenderdigital.top/pos_doutorado/" class="btn btn-light text-start fw-bold border border-primary">
+						<i class="fas fa-laptop me-2"></i> PÓS-DOUTORADO
+					</a>
+				</div>
+			</div>
+
+
+    <!-- Sessão da Galeria de fotos -->
+    <div class="container my-5">
+        <h2 class="mb-3">Galeria</h2>
+        <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-6"><img src="imagens/galeria/1.jpg" class="gallery-img" alt="Imagem 1"></div>
+                        <div class="col-6"><img src="imagens/galeria/2.png" class="gallery-img" alt="Imagem 2"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-6"><img src="imagens/galeria/3.jpg" class="gallery-img" alt="Imagem 3"></div>
+                        <div class="col-6"><img src="imagens/galeria/4.png" class="gallery-img" alt="Imagem 4"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-6"><img src="imagens/galeria/5.jpg" class="gallery-img" alt="Imagem 5"></div>
+                        <div class="col-6"><img src="imagens/galeria/6.jpg" class="gallery-img" alt="Imagem 6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <a href="https://aprenderdigital.top" class="btn btn-primary">Ver todas</a>
+        </div>
+    </div>
+
+<!-- Depoimentos com carrossel automático funcional -->
+<section id="depoimentos">
+  <h2>O que nossos alunos dizem</h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      
+      <!-- Depoimento 1 -->
+      <div class="testimonial">
+        <div class="testimonial-left">
+          <img src="https://aprenderdigital.top/imagens/alunos/tageane1.jpg" alt="Tageane Maria Silva Rezendi">
+          <div class="aluno-info">
+            <a href="https://www.facebook.com/tageanemariasilva.rezendi" target="_blank" rel="noopener noreferrer">
+              Tageane Maria Silva Rezendi
+            </a>
+            <span>Concluinte do Ensino Médio</span>
+          </div>
+        </div>
+        <blockquote>
+          “Concluir meu ensino médio em apenas 3 meses foi a melhor decisão da minha vida! Agradeço especialmente ao professor Gutenberg pelo apoio e incentivo.”
+        </blockquote>
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div class="testimonial">
+        <div class="testimonial-left">
+          <img src="https://aprenderdigital.top/imagens/alunos/edielson.jpg" alt="Edilson Soares Marques">
+          <div class="aluno-info">
+            <a href="https://www.facebook.com/profile.php?id=100094619963606" target="_blank" rel="noopener noreferrer">
+              Edilson Soares Marques 
+            </a>
+            <span>Concluinte do Ensino Médio</span>
+          </div>
+        </div>
+        <blockquote>
+          “Com o Projeto Aprender Digital tive a chance de conquistar meu diploma. O tendimento do professor é incrível e tudo 100% online. Obrigado por tudo!”
+        </blockquote>
+      </div>
+
+      <!-- Depoimento 3 -->
+      <div class="testimonial">
+        <div class="testimonial-left">
+          <img src="https://aprenderdigital.top/imagens/alunos/tais.jpg" alt="Tais Rezende">
+          <div class="aluno-info">
+            <a href="https://www.facebook.com/tais.rezende.965" target="_blank" rel="noopener noreferrer">
+              Tais Rezende
+            </a>
+            <span>Concluinte do Ensino Médio</span>
+          </div>
+        </div>
+        <blockquote>
+          “Tive medo no começo, mas o suporte da equipe e a dedicação do professor tornaram tudo mais fácil. Hoje tenho orgulho de dizer que concluí o Ensino Médio e em breve terei minha formação técnica!”
+        </blockquote>
+      </div>
+
+      <!-- Depoimento 4 -->
+      <div class="testimonial">
+        <div class="testimonial-left">
+          <img src="https://aprenderdigital.top/imagens/alunos/gabriel_tavares.jpg" alt="Gabriel Tavares">
+          <div class="aluno-info">
+            <a href="https://www.facebook.com/gabriel.tavares.407754/" target="_blank" rel="noopener noreferrer">
+              Gabriel Tavares
+            </a>
+            <span>Concluinte do Ensino Médio</span>
+          </div>
+        </div>
+        <blockquote>
+          “Achei que nunca conseguiria estudar com tantos compromissos, mas o Projeto Aprender Digital e a equipe do professor Gutenberg tornaram isso possível!”
+        </blockquote>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+#depoimentos {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: #f9f9f9;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 900px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  width: 400%; /* 4 depoimentos */
+  /* A linha abaixo define o tempo de cada depoimento */
+  /* A fórmula é "número de depoimentos x tempo" */
+  animation: slide 40s infinite; 
+}
+
+.testimonial {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+}
+
+.testimonial-left img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1em;
+}
+
+.aluno-info a {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.aluno-info span {
+  font-size: 0.9em;
+  color: #777;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Animação automática e em loop */
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .testimonial-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .testimonial-left img {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+}
+</style>
+
+
+ <!-- Rodapé -->
+<footer class="bg-dark text-white pt-4 rounded">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>Aprender Digital</h5>
+                <p>Conectando você ao aprendizado de qualidade, onde quer que esteja.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Links Úteis</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://aprenderdigital.top/" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="https://aprenderdigital.top/curso/" class="text-white text-decoration-none">Nossos Cursos</a></li>
+                    <li><a href="https://aprenderdigital.top/nos/" class="text-white text-decoration-none">Quem Somos</a></li>
+                    <li><a href="https://aprenderdigital.top/blog/" class="text-white text-decoration-none">Blog</a></li>
+                    <li><a href="https://aprenderdigital.top/certificados/" class="text-white text-decoration-none">Validar Certificado</a></li>
+                    <li><a href="https://aprenderdigital.top/pp/" class="text-white text-decoration-none">Política e Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Contato</h5>
+                <p><i class="fas fa-envelope me-2"></i>contato@aprenderdigital.com</p>
+                <p><i class="fas fa-phone me-2"></i>(94) 98422-3453</p>
+                <p>Redes Sociais:</p>
+                <div>
+                    <a href="https://www.facebook.com/aprenderdigitallll" class="text-white me-3 text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/aprenderdigital_" class="text-white me-3 text-decoration-none"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@GutenbergBarroso_" class="text-white me-3 text-decoration-none"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3 pb-3">
+            <p class="text-center mt-8">
+                CNPJ 58.964.397/0001-11 © 2025 Todos os direitos reservados a 
+                <a class="text-blue-500 hover:underline text-decoration-none" href="https://www.facebook.com/prof.gutenbergbarroso" target="_blank">Gutenberg Barroso</a>.
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- Fim do Rodapé -->
+
+
+    
+	<!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script para pausar, avançar ou retroceder o carrossel
+        var carouselElement = document.getElementById('carouselBanners');
+        var carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
+        var pauseBtn = document.getElementById('carouselPauseBtn');
+        var isPaused = false;
+        pauseBtn.addEventListener('click', function() {
+            if (!isPaused) {
+                carousel.pause();
+                this.textContent = 'Play';
+            } else {
+                carousel.cycle();
+                this.textContent = 'Pausar';
+            }
+            isPaused = !isPaused;
+        });
+    </script>
+	
+	<!-- Atendimento WhatsApp FIXO e FUNCIONAL -->
+		<style>
+		  #whatsapp-button {
+			position: fixed;
+			bottom: 80px;
+			right: 24px;
+			width: 60px;
+			height: 60px;
+			background: #25d366 url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') no-repeat center;
+			background-size: 60%;
+			border-radius: 50%;
+			z-index: 9999;
+			cursor: pointer;
+		  }
+
+		  #whatsapp-popup {
+			position: fixed;
+			bottom: 150px;
+			right: 24px;
+			width: 300px;
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+			display: none;
+			z-index: 9999;
+			font-family: Arial, sans-serif;
+		  }
+
+		  #whatsapp-popup header {
+			background: #25d366;
+			color: white;
+			padding: 12px;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 8px 8px 0 0;
+		  }
+
+		  .whatsapp-option {
+			display: flex;
+			align-items: center;
+			padding: 10px;
+			border-top: 1px solid #eee;
+			text-decoration: none;
+			color: #333;
+		  }
+
+		  .whatsapp-option:hover {
+			background: #f9f9f9;
+		  }
+
+		  .whatsapp-avatar {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background-size: cover;
+			background-position: center;
+			margin-right: 10px;
+		  }
+
+		  .whatsapp-text {
+			display: flex;
+			flex-direction: column;
+		  }
+
+		  .whatsapp-text .name {
+			font-weight: bold;
+		  }
+
+		  .whatsapp-text .role {
+			font-size: 12px;
+			color: #666;
+		  }
+		</style>
+
+		<div id="whatsapp-button" onclick="toggleWhatsAppPopup()"></div>
+
+		<div id="whatsapp-popup">
+		  <header>Conversar pelo WhatsApp</header>
+
+				  <a class="whatsapp-option" href="https://aprenderdigital.top/fale_conosco.html" target="_blank">
+					<div class="whatsapp-avatar" style="background-image: url('https://aprenderdigital.top/wp-content/uploads/2022/09/digital.png');"></div>
+					<div class="whatsapp-text">
+					  <div class="name">Assistente Virtual</div>
+					  <div class="role">Digital - Sua assistente virtual</div>
+					</div>
+				  </a>
+
+				  <a class="whatsapp-option" href="https://wa.me/5594984223453?text=Vim%20do%20site%20Aprender%20Digital!" target="_blank">
+					<div class="whatsapp-avatar" style="background-image: url('https://aprenderdigital.top/wp-content/uploads/2021/01/multiatendimento.png');"></div>
+					<div class="whatsapp-text">
+					  <div class="name">Fale com um consultor!</div>
+					  <div class="role">Equipe Comercial</div>
+					</div>
+				  </a>
+				</div>
+
+		<script>
+		  function toggleWhatsAppPopup() {
+			const popup = document.getElementById('whatsapp-popup');
+			popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+		  }
+
+		  // Fechar o popup ao clicar fora
+		  document.addEventListener('click', function (e) {
+			const popup = document.getElementById('whatsapp-popup');
+			const button = document.getElementById('whatsapp-button');
+			if (!popup.contains(e.target) && !button.contains(e.target)) {
+			  popup.style.display = 'none';
+			}
+		  });
+		</script>
+		<!-- FIM Atendimento WhatsApp -->
+			
+			<!-- Script do botão de som do vídeo -->
+			<script>
+			const video = document.getElementById("youtube-video");
+			const toggleBtn = document.getElementById("toggleSoundBtn");
+
+			let isMuted = true;
+
+			toggleBtn.addEventListener("click", function () {
+				isMuted = !isMuted;
+
+				const muteParam = isMuted ? "1" : "0";
+				const btnText = isMuted ? "🔊 Assistir com som" : "🔇 Assistir sem som";
+
+				video.src = `https://www.youtube.com/embed/MtXXg849-ys?autoplay=1&mute=${muteParam}&loop=1&playlist=MtXXg849-ys&controls=1&rel=0`;
+				toggleBtn.innerText = btnText;
+			});
+</script>
+
+</body>
+</html>

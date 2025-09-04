@@ -1,0 +1,187 @@
+
+<html lang="pt-BR">
+<head><meta charset="utf-8">
+  
+  <link rel="icon" href="https://aprenderdigital.top/imagens/favicom.png" type="image/x-icon">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Verificar Certificado</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .carousel {
+      display: flex;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    .carousel-item {
+      flex: none;
+      scroll-snap-align: start;
+      width: 100%;
+    }
+  </style>
+  <meta property="og:title" content="Aprender Digital" />
+  <meta property="og:description" content="Educação de qualidade, onde você estiver. Explore nossos cursos e comece a aprender hoje mesmo!" />
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/-kgTZ2T_oysd4tgtI4jbI4B3mVldXiDKbpzUR0igIjc.jpg" />
+  <meta property="og:url" content="https://aprenderdigital.top" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aprender Digital" />
+  <meta name="twitter:description" content="Educação de qualidade, onde você estiver. Explore nossos cursos e comece a aprender hoje mesmo!" />
+  <meta name="twitter:image" content="https://storage.googleapis.com/a1aa/image/-kgTZ2T_oysd4tgtI4jbI4B3mVldXiDKbpzUR0igIjc.jpg" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousels = document.querySelectorAll('.carousel');
+      carousels.forEach(carousel => {
+        let interval = setInterval(() => {
+          const firstItem = carousel.querySelector('.carousel-item:first-child');
+          carousel.appendChild(firstItem);
+        }, 5000);
+      });
+
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+
+      dropdown.addEventListener('click', function (event) {
+        event.stopPropagation();
+        dropdownMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', function () {
+        dropdownMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</head>
+<body class="font-roboto bg-gray-100">
+  <div class="max-w-7xl mx-auto bg-white shadow-lg">
+    <header id="header" class="bg-blue-600 text-white fixed top-0 w-full z-10 transition-all duration-300">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold">
+          <a href="https://aprenderdigital.top" class="no-link-style">
+            <img src="https://aprenderdigital.top/imagens/logotipo/logotipo_branco_la.png" alt="Logotipo da Aprender Digital" class="h-12 w-auto"/>
+          </a>
+        </div>
+        <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+        <nav id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+          <a class="hover:hover:text-blue-900 no-underline" href="https://aprenderdigital.top">Home</a>
+          <div class="relative dropdown">
+            <a class="block px-4 py-2 hover:hover:text-blue-900 no-underline" href="#">Nossos Cursos</a>
+            <ul class="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded hidden dropdown-menu">
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#livres.html">Profiss. Comuns</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#livres.html">Profiss. Avançados</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/eja_medio.html">EJA - Fundamental e Médio</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#livres.html">Técnicos</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Pós-Técnicos</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Cert. por Competência</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Tecnólogos</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#graduacao.html">Graduação</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#livres.html">2ª Graduação</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Superior Sequencial</a></li>
+			  <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#tecnicos.html">Extensão Universitária</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#pos.html">Pós-Graduação</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-200" href="https://aprenderdigital.top/#gratis.html">Cursos Grátis</a></li>
+            </ul>
+          </div>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/quem_somos.html">Quem Somos</a>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/blog/blog.html">Blog</a>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/verificar_certificado.html">Verificar Certificado</a>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/politica_de_privacidade.html">Política de Privacidade</a>
+          <a class="hover:text-blue-900 no-underline" href="https://aprenderdigital.top/fale_conosco.html">Fale Conosco</a>
+          <a href="https://aprenderdigital.top/cursos/login/index.php" class="bg-blue-200 text-black px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Minha Conta</a>
+        </nav>
+      </div>
+    </header>
+    <script>
+      window.onscroll = function() {changeHeaderColor()};
+      function changeHeaderColor() {
+        const header = document.getElementById("header");
+        if (window.pageYOffset > 50) {
+          header.classList.add("bg-blue-200");
+          header.classList.remove("bg-blue-600");
+        } else {
+          header.classList.add("bg-blue-600");
+          header.classList.remove("bg-blue-200");
+        }
+      }
+    </script>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', () => {
+        dropdownMenu.classList.add('hidden');
+      });
+    });
+  </script>
+  <main>
+    <div class="container mx-auto py-20 px-4">
+      <h1 class="text-3xl font-bold text-center mb-8">Verificação de Certificado</h1>
+      <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <form onsubmit="verifyCertificate(event)">
+          <div class="mb-4">
+            <label for="certificate-code" class="block text-gray-700 font-bold mb-2">Código do Certificado:</label>
+            <input type="text" id="certificate-code" name="certificate-code" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Digite o código do certificado">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Verificar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+   <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-lg font-bold mb-4"><i class="fas fa-shopping-cart"></i> Categorias</h4>
+            <ul>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">ADMINISTRATIVO</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">INFORMÁTICA E TECNOLOGIA</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">IDIOMAS</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">PREPARATÓRIOS</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">DIVERSAS ÁREAS</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4"><i class="fas fa-user"></i> Minha conta</h4>
+            <ul>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">Meus cursos</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">Minha conta</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">Suporte</a></li>
+              <li class="mb-2"><a class="hover:underline" href="https://aprenderdigital.top/">Contato</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4"><i class="fas fa-phone-square"></i> Contato</h4>
+            <p class="mb-2"><i class="fas fa-phone"></i> <a href="tel:+5594984223453" class="phone-link">(94) 98422-3453</a></p>
+            <p class="mb-2"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5594984223453?text=Olá%20Gutenberg%20Barroso,%20gostaria%20de%20saber%20mais%20sobre%20um%20curso!" target="_blank" class="whatsapp-link">(94) 98422-3453</a></p>
+            <p class="mb-2"><i class="fas fa-map-marker-alt"></i> Av. 7 de Setembro, Nº 2720, Setor: Centro, Floresta do Araguaia / PA, CEP: 68543-000</p>
+            <p class="mb-2"><i class="far fa-envelope"></i> contato@aprenderdigital.top</p>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-4"><i class="fas fa-lock"></i> Compra Segura</h4>
+            <center>
+              <img alt="Imagem representando segurança na compra" class="mb-4" height="239" src="https://aprenderdigital.top/imagens/Compra_100_segura.png" width="239"/>
+            </center>
+          </div>
+        </div>
+        <p class="text-center mt-8">CNPJ 58.964.397/0001-11 © 2025 Todos os direitos reservados a <a class="text-blue-500 hover:underline" href="https://www.facebook.com/prof.gutenbergbarroso" target="_blank">Gutenberg Barroso</a>.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

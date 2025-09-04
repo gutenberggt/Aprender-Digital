@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+			<!-- Desenvolvido por Gutenberg Barroso em 14 de maio de 2025 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PÁGINA EM MANUTENÇÃO</title>
+	<!-- favicon (ícone do site que aparece na aba do navegador) -->
+	<link rel="icon" type="image/png" href="https://aprenderdigital.top/imagens/favicom.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .top-bar {
+            background-color: #f8f9fa;
+        }
+        .social-icons a {
+            color: #333;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .search-area input {
+            width: 200px;
+        }
+        .second-bar {
+            background-color: #ffffff;
+        }
+        .course-btn {
+            background-color: #add8e6;
+            color: #000;
+            padding: 10px;
+            border: none;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+        .course-btn:hover {
+            background-color: #00008b;
+            color: #fff;
+            text-decoration: none;
+        }
+        .course-btn + .course-btn {
+            margin-top: 10px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-img {
+            width: 100%;
+            height: auto;
+        }
+        .bg-custom-gray {
+            background-color: #e9ecef;
+        }
+		.top-bar {
+		  background-color: #f57c00; /* Laranja forte */
+		  color: white;
+		  padding: 5px 20px;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  font-size: 14px;
+		}
+		.nav-bar {
+		  background-color: #1565c0; /* Azul médio */
+		  color: white;
+		  padding: 10px 20px;
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		}
+		.carousel-inner img {
+			border-radius: 10px;
+		}
+	/* Fixar a segunda barra */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1030; /* garantir que fique acima de outros elementos */
+}
+
+/* Fixar o banner cinza abaixo da segunda barra */
+.banner-sticky {
+    position: sticky;
+    top: 60px; /* ajuste conforme a altura da barra acima */
+    z-index: 1020;
+}
+ 
+  
+ #whatsapp-label {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  border-radius: 25px;
+  z-index: 10001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.5s infinite;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;       /* <-- Impede o botão de expandir */
+  max-width: max-content;      /* <-- Ajusta ao conteúdo interno */
+  white-space: nowrap;         /* <-- Evita quebra de linha */
+}
+
+/* Efeito de pulsar */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+    </style>
+	
+	
+  <!-- PIXEL DO FACEBOOK -->
+	  <script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '3963618581879'); 
+		fbq('track', 'PageView');
+	  </script>
+	  <noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=3963618581879&ev=PageView&noscript=1"
+	  /></noscript>
+
+	  <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-899Q9DMSJF"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-899Q9DMSJF');
+	</script>
+
+	
+</head>
+<body>
+    <!-- Primeira barra: redes sociais + pesquisa + botões -->
+<div class="top-bar bg-orange text-white py-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        
+        <!-- Ícones de redes sociais -->
+        <div class="social-icons d-flex gap-2">
+            <a href="https://www.facebook.com/aprenderdigitallll" class="text-white" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aprenderdigital_" class="text-white" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@GutenbergBarroso_" class="text-white" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5594984223453" class="text-white" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <!-- Campo de pesquisa com ícone de lupa -->
+        <div class="search-bar d-flex align-items-center">
+            <input type="text" class="form-control form-control-sm me-1" placeholder="Pesquisar no site...">
+            <button class="btn btn-light btn-sm"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Botões de Área Restrita e E-mail -->
+        <div class="buttons d-flex gap-2">
+            <a href="https://aprenderdigital.top/cursos/login/" class="btn btn-outline-light btn-sm fw-bold border border-white">Área Restrita</a>
+            <a href="https://webmail.aprenderdigital.top/" class="btn btn-outline-light btn-sm fw-bold border border-white">E-mail</a>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Segunda barra: logotipo + navegação -->
+<nav class="nav-bar navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="https://aprenderdigital.top/">
+            <img src="https://aprenderdigital.top/imagens/logotipo/logo_brancola.png" alt="Logo Aprender Digital" style="height: 50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/curso">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/nos/">Quem Somos</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/blog/">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/certificados">Validar Certificado</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://aprenderdigital.top/pp">Política de Privacidade</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Banner Cinza -->
+<div class="bg-custom-gray text-center py-3 banner-sticky">
+    <p class="mb-0"><strong>Projeto Aprender Digital</strong> — Em parceria com a LA Educação, conectamos você ao aprendizado de qualidade, onde quer que esteja!</p>
+</div>
+
+    <!-- Conteúdo principal -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Primeira Coluna (2/3) -->
+            <div class="col-md-8">
+
+
+  <style>
+    .carousel {
+      display: flex;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    .carousel-item {
+      flex: none;
+      scroll-snap-align: start;
+      width: 100%;
+    }
+  </style>
+  <meta property="og:title" content="Aprender Digital" />
+  <meta property="og:description" content="Educação de qualidade, onde você estiver. Explore nossos cursos e comece a aprender hoje mesmo!" />
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/-kgTZ2T_oysd4tgtI4jbI4B3mVldXiDKbpzUR0igIjc.jpg" />
+  <meta property="og:url" content="https://aprenderdigital.top" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aprender Digital" />
+  <meta name="twitter:description" content="Educação de qualidade, onde você estiver. Explore nossos cursos e comece a aprender hoje mesmo!" />
+  <meta name="twitter:image" content="https://storage.googleapis.com/a1aa/image/-kgTZ2T_oysd4tgtI4jbI4B3mVldXiDKbpzUR0igIjc.jpg" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousels = document.querySelectorAll('.carousel');
+      carousels.forEach(carousel => {
+        let interval = setInterval(() => {
+          const firstItem = carousel.querySelector('.carousel-item:first-child');
+          carousel.appendChild(firstItem);
+        }, 5000);
+      });
+
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+
+      dropdown.addEventListener('click', function (event) {
+        event.stopPropagation();
+        dropdownMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', function () {
+        dropdownMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</head>
+<body class="font-roboto bg-gray-100">
+  <div class="max-w-7xl mx-auto bg-white shadow-lg">
+    <header id="header" class="bg-blue-600 text-white fixed top-0 w-full z-10 transition-all duration-300">
+      <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold">
+          
+        
+      </div>
+    </header>
+    <script>
+      window.onscroll = function() {changeHeaderColor()};
+      function changeHeaderColor() {
+        const header = document.getElementById("header");
+        if (window.pageYOffset > 50) {
+          header.classList.add("bg-blue-200");
+          header.classList.remove("bg-blue-600");
+        } else {
+          header.classList.add("bg-blue-600");
+          header.classList.remove("bg-blue-200");
+        }
+      }
+    </script>
+	
+	<!-- Início do conteúdo da página. -->
+    <main style="padding-top: 40px;">
+  <div style="width: 90%; margin: 0 auto; text-align: center; padding: 80px 0;">
+    <p style="font-size: 2rem; font-weight: bold; color: #1d4ed8; margin-bottom: 1rem;">
+      Desculpe! Esta página está em manutenção.
+    </p>
+    <p style="font-size: 1.25rem; color: #334155;">
+      Em breve você terá acesso ao nosso conteúdo.
+    </p> 
+  </div>
+</main>
+
+
+	<!-- Fim do conteúdo da página.  -->
+	
+	<!-- Atendimento WhatsApp FIXO e FUNCIONAL -->
+		<style>
+		  #whatsapp-button {
+			position: fixed;
+			bottom: 80px;
+			right: 24px;
+			width: 60px;
+			height: 60px;
+			background: #25d366 url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') no-repeat center;
+			background-size: 60%;
+			border-radius: 50%;
+			z-index: 9999;
+			cursor: pointer;
+		  }
+
+		  #whatsapp-popup {
+			position: fixed;
+			bottom: 150px;
+			right: 24px;
+			width: 300px;
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+			display: none;
+			z-index: 9999;
+			font-family: Arial, sans-serif;
+		  }
+
+		  #whatsapp-popup header {
+			background: #25d366;
+			color: white;
+			padding: 12px;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 8px 8px 0 0;
+		  }
+
+		  .whatsapp-option {
+			display: flex;
+			align-items: center;
+			padding: 10px;
+			border-top: 1px solid #eee;
+			text-decoration: none;
+			color: #333;
+		  }
+
+		  .whatsapp-option:hover {
+			background: #f9f9f9;
+		  }
+
+		  .whatsapp-avatar {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background-size: cover;
+			background-position: center;
+			margin-right: 10px;
+		  }
+
+		  .whatsapp-text {
+			display: flex;
+			flex-direction: column;
+		  }
+
+		  .whatsapp-text .name {
+			font-weight: bold;
+		  }
+
+		  .whatsapp-text .role {
+			font-size: 12px;
+			color: #666;
+		  }
+		</style>
+		
+		<!-- Rótulo flutuante -->
+		
+		<div id="whatsapp-button" onclick="toggleWhatsAppPopup()"></div>
+
+		<div id="whatsapp-popup">
+		  <header>Conversar pelo WhatsApp</header>
+
+				  <a class="whatsapp-option" href="https://aprenderdigital.top/fale_conosco.html" target="_blank">
+					<div class="whatsapp-avatar" style="background-image: url('https://aprenderdigital.top/wp-content/uploads/2022/09/digital.png');"></div>
+					<div class="whatsapp-text">
+					  <div class="name">Assistente Virtual</div>
+					  <div class="role">Digital - Sua assistente virtual</div>
+					</div>
+				  </a>
+
+				  <a class="whatsapp-option" href="https://wa.me/5594984223453?text=Vim%20do%20site%20Aprender%20Digital!" target="_blank">
+					<div class="whatsapp-avatar" style="background-image: url('https://aprenderdigital.top/wp-content/uploads/2021/01/multiatendimento.png');"></div>
+					<div class="whatsapp-text">
+					  <div class="name">Fale com um consultor!</div>
+					  <div class="role">Equipe Comercial</div>
+					</div>
+				  </a>
+				</div>
+
+		<script>
+		  function toggleWhatsAppPopup() {
+			const popup = document.getElementById('whatsapp-popup');
+			popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
+		  }
+
+		  // Fechar o popup ao clicar fora
+		  document.addEventListener('click', function (e) {
+			const popup = document.getElementById('whatsapp-popup');
+			const button = document.getElementById('whatsapp-button');
+			if (!popup.contains(e.target) && !button.contains(e.target)) {
+			  popup.style.display = 'none';
+			}
+		  });
+		</script>
+		<!-- FIM Atendimento WhatsApp -->
+			
+			
+</body>
+</html>
